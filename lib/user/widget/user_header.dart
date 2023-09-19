@@ -39,7 +39,7 @@ Text priceText(String price) {
     price,
     style: const TextStyle(
       color: Colors.black,
-      fontSize: 37,
+      fontSize: 30,
       fontFamily: 'Montserrat',
     ),
   );
@@ -49,7 +49,7 @@ Text dateText(String date) {
   return Text(
     date,
     style: const TextStyle(
-      color: Color.fromARGB(255, 243, 2, 2),
+      color: Color.fromARGB(255, 214, 6, 6),
       fontSize: 20,
       fontFamily: 'Montserrat',
     ),

@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:exercice_2/user/widget/user_buttom.dart';
 import 'package:exercice_2/user/widget/user_header.dart';
@@ -12,7 +11,12 @@ class User extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          toolbarHeight: 100,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back,
+                color: Color.fromARGB(255, 255, 255, 255)),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+          toolbarHeight: 88,
           //const headerUser(name: 'JEAN', surname: 'Hugues') as String,
           title: const Text("JEAN Hugues"),
           backgroundColor: const Color.fromARGB(255, 10, 10, 10),
@@ -27,7 +31,7 @@ class User extends StatelessWidget {
             scrollDirection: Axis.vertical,
             child: Column(
               children: [
-                //Padding(padding: EdgeInsets.only(top: 10)),
+                Padding(padding: EdgeInsets.only(top: 10)),
                 HeaderUser(date: "NDF Octobre", price: 75.3),
                 UserButtom(),
                 Padding(padding: EdgeInsets.only(top: 12)),
@@ -96,7 +100,10 @@ Container accepterButton() {
             Padding(padding: EdgeInsets.only(left: 6)),
             Text(
               'VALIDER',
-              style: TextStyle(color: Color.fromARGB(255, 57, 92, 49)),
+              style: TextStyle(
+                color: Color.fromARGB(255, 57, 92, 49),
+                fontFamily: 'Montserrat',
+              ),
             ),
           ],
         )),
@@ -111,8 +118,9 @@ Container refuserButoon() {
     child: ElevatedButton(
         onPressed: () {},
         style: ElevatedButton.styleFrom(
-            side: const BorderSide(color: Colors.red),
-            backgroundColor: const Color.fromARGB(255, 255, 255, 255)),
+          side: const BorderSide(color: Color.fromARGB(255, 238, 84, 73)),
+          backgroundColor: const Color.fromARGB(255, 255, 255, 255),
+        ),
         child: const Row(
           children: [
             Icon(
@@ -122,7 +130,10 @@ Container refuserButoon() {
             Padding(padding: EdgeInsets.only(left: 6)),
             Text(
               'REFUSER',
-              style: TextStyle(color: Color.fromARGB(255, 243, 1, 1)),
+              style: TextStyle(
+                color: Color.fromARGB(255, 243, 1, 1),
+                fontFamily: 'Montserrat',
+              ),
             ),
           ],
         )),

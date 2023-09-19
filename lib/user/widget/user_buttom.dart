@@ -35,19 +35,24 @@ TextField searchBar() {
   );
 }
 
-Checkbox checkboxUser() {
-  bool isChecked = true;
-  return Checkbox(
-      value: isChecked,
-      activeColor: Colors.red,
-      onChanged: (newbool) {
-        newbool = false;
-      });
+Container checkboxUser() {
+  bool isChecked = false;
+  return Container(
+    child: Transform.scale(
+      scale: 1.3,
+      child: Checkbox(
+          value: isChecked,
+          activeColor: Colors.red,
+          onChanged: (newbool) {
+            newbool = false;
+          }),
+    ),
+  );
 }
 
 SizedBox testBar() {
   return SizedBox(
-    height: 38,
+    height: 36,
     width: 250,
     child: TextField(
       decoration: InputDecoration(

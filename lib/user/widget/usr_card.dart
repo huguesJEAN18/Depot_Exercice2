@@ -15,7 +15,7 @@ class UserCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         margin: const EdgeInsets.only(left: 12, right: 12, top: 9),
-        height: 90,
+        height: 80,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: const Color.fromARGB(255, 255, 255, 255),
@@ -49,7 +49,7 @@ class UserCard extends StatelessWidget {
             Row(
               children: [
                 Container(
-                  margin: const EdgeInsets.only(left: 120, top: 10),
+                  margin: const EdgeInsets.only(left: 110, top: 10),
                   child: Column(children: [
                     SizedBox(
                       height: 30,
@@ -57,7 +57,7 @@ class UserCard extends StatelessWidget {
                           style: const TextStyle(
                             color: Color.fromARGB(255, 197, 196, 196),
                             fontSize: 12,
-                            fontFamily: 'Montserrat',
+                            //fontFamily: 'Montserrat',
                           )),
                     ),
                     submit(),
@@ -86,8 +86,8 @@ Container iconLabel() {
 Container submit() {
   return Container(
       padding: const EdgeInsets.all(15),
-      height: 30,
-      width: 60,
+      height: 25,
+      width: 55,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: const Color.fromARGB(255, 253, 232, 136),
@@ -95,7 +95,7 @@ Container submit() {
       child: const Text(
         "Soumis",
         style: TextStyle(
-          color: Color.fromARGB(255, 250, 184, 1),
+          color: Color.fromARGB(255, 14, 13, 13),
           fontSize: 12,
         ),
       ));
