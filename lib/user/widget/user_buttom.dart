@@ -56,15 +56,18 @@ SizedBox testBar() {
     width: 250,
     child: TextField(
       decoration: InputDecoration(
-          fillColor: const Color.fromARGB(255, 233, 232, 238),
-          filled: true,
-          border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8.0),
-              borderSide: BorderSide.none),
-          hintText: 'Rechercher',
-          hintStyle: const TextStyle(color: Colors.grey),
-          prefixIcon: const Icon(Icons.search),
-          prefixIconColor: Colors.grey),
+        fillColor: const Color.fromARGB(255, 233, 232, 238),
+        filled: true,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
+          borderSide: BorderSide.none,
+        ),
+        hintText: 'Rechercher',
+        hintStyle: const TextStyle(color: Colors.grey),
+        prefixIcon: const Icon(Icons.search),
+        prefixIconColor: Colors.grey,
+        contentPadding: const EdgeInsets.symmetric(vertical: 8.0), // Ajustez cet espacement selon vos préférences
+      ),
     ),
   );
 }
