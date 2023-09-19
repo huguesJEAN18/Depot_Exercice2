@@ -55,19 +55,3 @@ Text dateText(String date) {
     ),
   );
 }
-
-TextField searchBar() {
-  return const TextField(
-      decoration: InputDecoration(
-    fillColor: Color.fromARGB(255, 14, 17, 212),
-  ));
-}
-
-Checkbox checkboxUser() {
-  return Checkbox(
-      value: false,
-      activeColor: Colors.red,
-      onChanged: (newbool) {
-        newbool = false;
-      });
-}
