@@ -46,7 +46,7 @@ Text priceUserCard(Text price) {
     style: const TextStyle(
       color: Color.fromARGB(255, 197, 196, 196),
       fontSize: 12,
-      fontFamily: 'Montserrat',
+      fontFamily: 'Montserrat-Light',
     ),
   );
 }

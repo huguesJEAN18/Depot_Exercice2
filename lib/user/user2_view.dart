@@ -1,11 +1,11 @@
+import 'package:exercice_2/user/widget/user_slidebar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
+
 import 'package:exercice_2/user/widget/user_buttom.dart';
 import 'package:exercice_2/user/widget/user_header.dart';
-import 'package:exercice_2/user/widget/usr_card.dart';
 
 class Users extends StatelessWidget {
-  const Users({Key? key});
+  const Users({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +29,11 @@ class Users extends StatelessWidget {
           child: Column(
             children: [
               Padding(padding: EdgeInsets.only(top: 10)),
-              HeaderUser(date: "NDF Octobre", price: 75.3),
+              HeaderUser(date: "NDF Octobre", priceTotal: 75.3),
               UserButtom(),
               Padding(padding: EdgeInsets.only(top: 12)),
-              SlidableList(), // Utilisez SlidableList à la place de UserCard
+              SlidableList()
+              // Utilisez SlidableList à la place de UserCard
             ],
           ),
         ),
@@ -75,19 +76,19 @@ Container accepterButton() {
       child: ElevatedButton(
         onPressed: () {},
         style: ElevatedButton.styleFrom(
-          backgroundColor: const Color.fromARGB(255, 174, 216, 174),
+          backgroundColor: const Color.fromARGB(255, 183, 226, 185),
         ),
         child: const Row(
           children: [
             Icon(
               Icons.done,
-              color: Color.fromARGB(255, 57, 92, 49),
+              color: Colors.green,
             ),
             Padding(padding: EdgeInsets.only(left: 6)),
             Text(
               'VALIDER',
               style: TextStyle(
-                color: Color.fromARGB(255, 57, 92, 49),
+                color: Color.fromARGB(255, 79, 161, 82),
                 fontFamily: 'Montserrat',
               ),
             ),
@@ -128,46 +129,4 @@ Container refuserButton() {
       ),
     ),
   );
-}
-
-class SlidableList extends StatelessWidget {
-  const SlidableList({Key? key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: 3, // Remplacez par le nombre de cartes que vous avez
-      itemBuilder: (context, index) {
-        return Dismissible(
-          key: UniqueKey(),
-          background: Container(
-            color: Colors.green,
-            alignment: Alignment.centerLeft,
-            child: Padding(
-              padding: const EdgeInsets.only(left: 20.0),
-              child: Icon(Icons.done, color: Colors.white),
-            ),
-          ),
-          secondaryBackground: Container(
-            color: Colors.red,
-            alignment: Alignment.centerRight,
-            child: Padding(
-              padding: const EdgeInsets.only(right: 20.0),
-              child: Icon(Icons.cancel, color: Colors.white),
-            ),
-          ),
-          onDismissed: (direction) {
-            if (direction == DismissDirection.startToEnd) {
-              // Logique lorsque vous appuyez sur "Valider"
-            } else if (direction == DismissDirection.endToStart) {
-              // Logique lorsque vous appuyez sur "Refuser"
-            }
-          },
-          child: Container(
-            child: UserCard(description: "Arret\Lyon Paris", date: "22 sep", price: 78.2),
-          ),
-        );
-      },
-    );
-  }
 }

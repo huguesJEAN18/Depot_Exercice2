@@ -1,14 +1,14 @@
 //import 'dart:ffi';
-
+import 'usr_card.dart';
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
 class HeaderUser extends StatelessWidget {
   final String date;
-  final double price;
+  final double priceTotal;
 
   // ignore: empty_constructor_bodies
-  const HeaderUser({super.key, required this.date, required this.price});
+  const HeaderUser({super.key, required this.date, required this.priceTotal});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class HeaderUser extends StatelessWidget {
             const Padding(
               padding: EdgeInsets.only(left: 138),
             ),
-            priceText('$price '),
+            priceText('$priceTotal '),
           ]),
         ),
         const Padding(
@@ -34,14 +34,14 @@ class HeaderUser extends StatelessWidget {
   }
 }
 
-Text priceText(String price) {
+Text priceText(priceTotal) {
   return Text(
-    price,
+    priceTotal,
     style: const TextStyle(
-      color: Colors.black,
-      fontSize: 30,
-      fontFamily: 'Montserrat',
-    ),
+        color: Colors.black,
+        fontSize: 30,
+        fontFamily: 'Montserrat',
+        fontWeight: FontWeight.w100),
   );
 }
 
