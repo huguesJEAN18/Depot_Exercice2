@@ -1,5 +1,5 @@
 //import 'dart:ffi';
-import 'usr_card.dart';
+
 import 'package:flutter/material.dart';
 
 // ignore: camel_case_types
@@ -12,36 +12,47 @@ class HeaderUser extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(children: [
-        Container(
-          child: Row(children: [
-            const Padding(
-              padding: EdgeInsets.only(left: 8),
-            ),
-            dateText(date),
-            const Padding(
-              padding: EdgeInsets.only(left: 138),
-            ),
-            priceText('$priceTotal '),
-          ]),
-        ),
+    return Column(children: [
+      Row(children: [
         const Padding(
-          padding: EdgeInsets.only(top: 5),
+          padding: EdgeInsets.only(left: 8),
         ),
+        dateText(date),
+        const Padding(
+          padding: EdgeInsets.only(left: 138),
+        ),
+        priceText('$priceTotal '),
       ]),
-    );
+      const Padding(
+        padding: EdgeInsets.only(top: 5),
+      ),
+    ]);
   }
 }
 
-Text priceText(priceTotal) {
-  return Text(
-    priceTotal,
-    style: const TextStyle(
-        color: Colors.black,
-        fontSize: 30,
-        fontFamily: 'Montserrat',
-        fontWeight: FontWeight.w100),
+RichText priceText(price) {
+  return RichText(
+    text: TextSpan(
+      children: [
+        TextSpan(
+          text: '$price', // Votre montant ici
+          style: const TextStyle(
+            color: Colors.black, // Couleur du montant
+            fontSize: 29, // Ajustez la taille du montant selon vos préférences
+            fontFamily: 'Montserrat', // Police de caractères du montant
+            fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.w300,
+          ),
+        ),
+        const WidgetSpan(
+          child: Icon(
+            Icons.euro_symbol, // Utilisez l'icône Euro
+            size: 10, // Ajustez la taille de l'icône selon vos préférences
+            color: Colors.black, // Couleur de l'icône
+          ),
+        ),
+      ],
+    ),
   );
 }
 

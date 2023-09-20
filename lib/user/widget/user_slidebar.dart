@@ -1,6 +1,5 @@
-import 'package:exercice_2/user/widget/usr_card.dart';
+import 'package:exercice_2/user/widget/user_card.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
 
 class SlidableList extends StatelessWidget {
   const SlidableList({super.key});

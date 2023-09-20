@@ -67,7 +67,7 @@ flutter:
       fonts:
         - asset: asset/fonts/Montserrat-Black.ttf
           style: italic
-          weight: 500
+          weight: 200
         
     
   # For details regarding fonts from package dependencies,

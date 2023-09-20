@@ -1,3 +1,4 @@
+import 'package:exercice_2/user/widget/user_apbar.dart';
 import 'package:exercice_2/user/widget/user_slidebar.dart';
 import 'package:flutter/material.dart';
 
@@ -16,8 +17,11 @@ class Users extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         toolbarHeight: 88,
-        title: const Text("JEAN Hugues"),
-        backgroundColor: const Color.fromARGB(255, 10, 10, 10),
+        title: const Text(
+          "JEAN Hugues",
+          style: TextStyle(fontFamily: "Montserrat"),
+        ),
+        backgroundColor: const Color.fromARGB(255, 27, 27, 27),
         foregroundColor: Colors.white,
       ),
       body: Container(
@@ -107,7 +111,8 @@ Container refuserButton() {
       child: ElevatedButton(
         onPressed: () {},
         style: ElevatedButton.styleFrom(
-          side: const BorderSide(color: Color.fromARGB(255, 238, 84, 73)),
+          side: const BorderSide(
+              color: Color.fromARGB(255, 238, 84, 73), width: 3),
           backgroundColor: const Color.fromARGB(255, 255, 255, 255),
         ),
         child: const Row(
