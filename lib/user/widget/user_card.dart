@@ -17,7 +17,8 @@ class UserCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Slidable(
       endActionPane: ActionPane(
-        extentRatio: 0.5,
+        closeThreshold: 0.7,
+        extentRatio: 0.4,
         motion: const StretchMotion(),
         children: [
           SlidableAction(
@@ -29,7 +30,7 @@ class UserCard extends StatelessWidget {
               label: 'REFUSER',
               icon: Icons.cancel_outlined,
               onPressed: (context) => ()),
-          const Padding(padding: EdgeInsets.only(left: 5, top: 10)),
+          const Padding(padding: EdgeInsets.only(left: 5, top: 80)),
           SlidableAction(
               padding: const EdgeInsets.only(left: 4, top: 10),
               spacing: 4,
